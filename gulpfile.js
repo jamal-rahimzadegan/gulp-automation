@@ -2,6 +2,7 @@ const gulp = require("gulp");
 const uglify = require("gulp-uglify");
 const prompt = require("gulp-prompt");
 const rename = require("gulp-rename");
+const replace = require("gulp-replace");
 const convertToKebabCase = require("./src/utils/convert-to-kebab-case");
 
 gulp.task("scripts", async () => {
@@ -10,6 +11,13 @@ gulp.task("scripts", async () => {
 
 gulp.task("watch", () => {
   gulp.watch("src/*.js", gulp.series("scripts"));
+});
+
+gulp.task("replace", async function () {
+  await gulp
+    .src("./src/file.js")
+    .pipe(replace("bar", "foo"))
+    .pipe(gulp.dest("replaced/"));
 });
 
 gulp.task("copy", async () => {
@@ -22,7 +30,7 @@ gulp.task("copy", async () => {
       },
       ({ name }) => {
         name = convertToKebabCase(name);
-        
+
         gulp
           .src("./src/components/template/*")
           .pipe(
