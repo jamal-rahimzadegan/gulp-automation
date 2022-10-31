@@ -1,7 +1,7 @@
 {
   "scripts": {
     "gulp": "gulp",
-    "generate-component": "gulp copy"
+    "generate-component": "gulp generate-component"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
