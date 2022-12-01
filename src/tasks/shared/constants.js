@@ -1,4 +1,4 @@
-const COPY_DATA = {
+const PROMPT_DATA = {
   type: "input",
   name: "name",
   message: "Please enter a name for the component?",
@@ -8,5 +8,5 @@ const COPY_DATA = {
 };
 
 module.exports = {
-  COPY_DATA,
+  PROMPT_DATA,
 };
