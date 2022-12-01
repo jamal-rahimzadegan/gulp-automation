@@ -2,7 +2,7 @@
   "scripts": {
     "gulp": "gulp",
     "generate-component": "gulp generate-component",
-    "generate-project": "gulp clone-repo"
+    "init-project": "gulp init-project"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

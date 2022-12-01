@@ -2,7 +2,17 @@ const git = require("gulp-git");
 const promptUser = require("../shared/utils/prompt-user");
 const convertToKebabCase = require("../shared/utils/convert-to-kebab-case");
 
-async function cloneRepo() {
+
+const updateTitle = () => {
+//     in index.html
+}
+
+const updatePackageJson = () => {
+    // package name, etc
+}
+
+
+async function initProject() {
     const URL = "https://github.com/jamal-rahimzadegan/custom-webpack.git";
 
     const handleResult = (err) => {
@@ -17,4 +27,4 @@ async function cloneRepo() {
     await promptUser("Please enter the name of the project?", generateProject, handleResult);
 }
 
-module.exports = cloneRepo;
+module.exports = initProject;
